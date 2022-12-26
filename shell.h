@@ -107,7 +107,7 @@ int change_dir(sh_t *data);
 int display_help(sh_t *data);
 int handle_builtin(sh_t *data);
 int check_builtin(sh_t *data);
-void env(sh_t *data __attribute__((unused)));
+int env(sh_t *data __attribute__((unused)));
 
 /* -------------Parse-----------------*/
 int is_path_form(sh_t *data);
