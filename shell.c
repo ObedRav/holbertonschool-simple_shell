@@ -20,6 +20,7 @@ int main(void)
 		{
 			if (isatty(STDIN_FILENO))
 				PRINT("\n");
+            fflush(stdin);
 			break;
 		}
 		if (split_line(&data) < 0)
