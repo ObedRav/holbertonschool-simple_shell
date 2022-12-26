@@ -107,7 +107,7 @@ int display_help(sh_t *data)
  * env - prints the current environment
  * @arv: array of arguments
  */
-void env(char **arv __attribute__ ((unused)))
+void env(sh_t *data __attribute__((unused)))
 {
 	int i;
 
