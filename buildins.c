@@ -104,6 +104,21 @@ int display_help(sh_t *data)
 	return (SUCCESS);
 }
 /**
+ * env - prints the current environment
+ * @arv: array of arguments
+ */
+void env(char **arv __attribute__ ((unused)))
+{
+	int i;
+
+	for (i = 0; environ[i]; i++)
+	{
+		_puts(environ[i]);
+		_puts("\n");
+	}
+}
+
+/**
  * handle_builtin - handle and manage the builtins cmd
  * @data: a pointer to the data structure
  *
@@ -116,6 +131,7 @@ int handle_builtin(sh_t *data)
 		{"exit", abort_prg},
 		{"cd", change_dir},
 		{"help", display_help},
+        {"env", env},
 		{NULL, NULL}
 	};
 	int i = 0;
