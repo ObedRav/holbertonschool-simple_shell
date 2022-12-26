@@ -20,9 +20,9 @@ int main(void)
 		{
 			if (isatty(STDIN_FILENO))
 				PRINT("\n");
-            fflush(stdin);
 			break;
 		}
+        fflush(stdin);
 		if (split_line(&data) < 0)
 		{
 			free_data(&data);
