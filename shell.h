@@ -77,6 +77,8 @@ int _strcmp(char *s1, char *s2);
 
 /* ----------More String prototype-------*/
 char *_strcpy(char *dest, char *source);
+int _putchar(char c);
+void _puts(char *str);
 
 /* ----------Memory prototype------------*/
 void *_realloc(void *ptr, unsigned int old_size, unsigned int new_size);
@@ -105,6 +107,7 @@ int change_dir(sh_t *data);
 int display_help(sh_t *data);
 int handle_builtin(sh_t *data);
 int check_builtin(sh_t *data);
+void env(char **arv __attribute__ ((unused)));
 
 /* -------------Parse-----------------*/
 int is_path_form(sh_t *data);
